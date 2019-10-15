@@ -1,24 +1,55 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer";
+import MainContent from "./components/MainContent/MainContent";
+import TodoItem from "./components/TodoItem/TodoItem";
+import ContactCard from "./components/ContactCard/ContactCard";
+
+import "./components/TodoItem/TodoItem.css";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="body">
+      <Header />
+
+      <div className="todo-list">
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+        <TodoItem />
+      </div>
+
+      <ContactCard
+        name="Mr. Paw"
+        imgUrl="http://placekitten.com/300/200"
+        phone="(555) 555-5555"
+        email="email@test.com"
+      />
+
+      <ContactCard
+        name="Mr. Cat"
+        imgUrl="http://placekitten.com/300/200"
+        phone="(555) 555-5555"
+        email="email@test.com"
+      />
+
+      <ContactCard
+        name="Mrs. Whiskers"
+        imgUrl="http://placekitten.com/300/200"
+        phone="(555) 555-5555"
+        email="email@test.com"
+      />
+
+      <ContactCard
+        name="Mr. Pink"
+        imgUrl="http://placekitten.com/300/200"
+        phone="(555) 555-5555"
+        email="email@test.com"
+      />
+
+      <Footer />
     </div>
   );
 }
