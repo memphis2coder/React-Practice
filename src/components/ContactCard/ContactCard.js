@@ -2,14 +2,14 @@ import React from "react";
 
 import "./ContactCard.css";
 
-function ContactCard() {
+function ContactCard(props) {
   return (
     <div className="contacts">
       <div className="contact-card">
-        <img src="http://placekitten.com/300/200" />
-        <h3>Mr. Cat</h3>
-        <p>Phone: (555) 555-5555</p>
-        <p>Email: email@test.com</p>
+        <img src={props.contact.imgUrl} alt="" />
+        <h3>{props.contact.name}</h3>
+        <p>Phone: {props.contact.phone}}</p>
+        <p>Email: {props.contact.email}</p>
       </div>
     </div>
   );
